@@ -14,7 +14,7 @@ for line in sys.stdin:
     if len(fields) < 2:
         continue
 
-    # The key (e.g., state or another identifier) is the first field
+    
     key = fields[0]
 
     # The date is in the second field
@@ -33,6 +33,6 @@ for line in sys.stdin:
     else:
         latest_dates[key] = max(latest_dates[key], current_date)
 
-# Output the latest date for each key
+
 for key, latest_date in latest_dates.items():
     print(f"{key}: Latest Date: {latest_date.strftime('%Y-%m-%d %H:%M:%S')}")
